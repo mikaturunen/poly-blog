@@ -10,7 +10,8 @@ function doCompile {
 	mv ./src out
 	mv ./index.html out/index.html
 	mv ./bower_components out
-	mv README.md ./out
+	mv README.md out
+	mv travis.enc out
 
 	echo "List files ./out -> gh-pages"
 	ls -la out
