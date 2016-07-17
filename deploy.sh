@@ -11,6 +11,10 @@ function doCompile {
 	mv ./index.html out/index.html
 	mv ./bower_components out
 	mv README.md out
+	mv manifest out/manifest.json
+	mv polymer.json out/polymer.json
+	mv service-worker.js out/service-worker.js
+	mv sw-precache-config.js out/sw-precache-config.js
 	mv travis.enc out
 
 	echo "List files ./out -> gh-pages"
