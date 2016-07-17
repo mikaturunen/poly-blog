@@ -11,6 +11,8 @@ function doCompile {
 	mv ./index.html ./out/index.html
 	mv ./bower_components ./out
 	mv README.md ./out
+	echo "List files ./out -> gh-pages"
+	ls -la ./out
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
