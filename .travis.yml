@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- stable
+
+before_script:
+    - npm install -g bower
+    - bower install
+
+script: bash ./travis/deploy.sh
+
+env:
+  global:
+  - ENCRYPTION_LABEL: "40b6fd27eaec"
+  - COMMIT_AUTHOR_EMAIL: "mika.turunen@ymail.com"
