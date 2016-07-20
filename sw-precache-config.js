@@ -1,8 +1,8 @@
 module.exports = {
 	staticFileGlobs: [
-		'./index.html',
-		'./manifest.json',
-		'./bower_components/webcomponentsjs/webcomponents-lite.min.js'
+		'/poly-blog/index.html',
+		'/poly-blog/manifest.json',
+		'/poly-blog/bower_components/webcomponentsjs/webcomponents-lite.min.js'
 	],
 	navigateFallback: './index.html'
 };
