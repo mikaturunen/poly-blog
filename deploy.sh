@@ -7,6 +7,12 @@ TARGET_BRANCH="gh-pages"
 function doCompile {
 	echo "Moving all specific files to ./out for gh-pages."
 	mv ./build/bundled/* out
+
+	# Trick: https://twitter.com/TonyOnodi/status/730697999039537152 - Wow, this is idiotic but works.
+	# I ain't falling back to url hashes as HNNGH. GH, fix your stuff! I would like to have spa support
+	# on service level instead of doing something like this or using hashes :(
+	cp out/index.html out/404.html
+
 	mv travis.enc out
 
 	echo "List files ./out -> gh-pages"
