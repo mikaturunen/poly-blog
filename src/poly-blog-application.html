@@ -110,7 +110,12 @@
 			],
 
 			_routePageChanged: function(page) {
-				this.page = page || "view1";
+				if (!page || page === "poly-blog") {
+					this.page = "view1";
+				} else {
+					this.page = page;
+				}
+				
 				console.log("_routePageChanged:", page, this.page);
 			},
 
