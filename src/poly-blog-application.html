@@ -125,9 +125,12 @@
 			_routePageChanged: function(page) {
 				if (!page || page === "poly-blog") {
 					this.page = "view1";
+				} else if (this.subroute.prefix === "/poly-blog") {
+					this.page = this.subroute.path.replace("/", "");
 				} else {
 					this.page = page;
 				}
+
 
 				console.log("_routePageChanged:", page, this.page, this.route, this.routeData, this.subroute);
 			},
