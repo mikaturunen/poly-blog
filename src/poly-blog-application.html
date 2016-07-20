@@ -130,7 +130,7 @@
 				} else if (page === "poly-blog") {
 					this.page = "view1";
 
-					if (this.subroute.prefix && this.subroute.prefix.indexOf("/poly-blog") !== -1) {
+					if (this.subroute && this.subroute.prefix && this.subroute.prefix.indexOf("/poly-blog") !== -1) {
 						this.page = this.subroute.path.replace("/", "");
 					}
 				} else {
