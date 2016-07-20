@@ -4,7 +4,9 @@ node_js:
 
 before_script:
     - npm install -g bower
+    - npm install -g polymer-cli
     - bower install
+    - polymer build
 
 script: bash ./deploy.sh
 

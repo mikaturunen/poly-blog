@@ -6,20 +6,11 @@ TARGET_BRANCH="gh-pages"
 
 function doCompile {
 	echo "Moving all specific files to ./out for gh-pages."
-	mv ./images out
-	mv ./src out
-	mv ./index.html out/index.html
-	mv ./bower_components out
-	mv README.md out
-	mv manifest.json out/manifest.json
-	mv polymer.json out/polymer.json
-	mv service-worker.js out/service-worker.js
-	mv sw-precache-config.js out/sw-precache-config.js
+	mv ./build/bundled out
 	mv travis.enc out
 
 	echo "List files ./out -> gh-pages"
 	ls -la out
-
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
