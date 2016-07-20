@@ -52,7 +52,7 @@
 		<app-location route="{{route}}"></app-location>
 		<app-route
 			    route="{{route}}"
-			    pattern="{{pattern}}"
+			    pattern="/:page"
 			    data="{{routeData}}"
 			    tail="{{subroute}}"
 			></app-route>
@@ -129,8 +129,7 @@
 					this.page = page;
 				}
 
-				console.log("_routePageChanged:", page, this.page);
-				console.log("_routePageChanged:", this.route)
+				console.log("_routePageChanged:", page, this.page, this.route);
 			},
 
 			_pageChanged: function(page) {
