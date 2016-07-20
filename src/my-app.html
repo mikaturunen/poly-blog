@@ -13,7 +13,7 @@
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
 <link rel="import" href="my-icons.html">
 
-<dom-module id="my-app">
+<dom-module id="poly-blog-application">
 	<template>
 		<style>
 			:host {
@@ -95,7 +95,7 @@
 
 	<script>
 		Polymer({
-			is: "my-app",
+			is: "poly-blog-application",
 
 			properties: {
 				page: {
@@ -111,12 +111,18 @@
 
 			_routePageChanged: function(page) {
 				this.page = page || "view1";
+				console.log("_routePageChanged:", page, this.page);
 			},
 
 			_pageChanged: function(page) {
+				console.log("_pageChanged:", page);
 				// load page import on demand.
 				this.importHref(
-				this.resolveUrl("my-" + page + ".html"), null, null, true);
+					this.resolveUrl("my-" + page + ".html"),
+					null,
+					null,
+					true
+				);
 			}
 
 		});
