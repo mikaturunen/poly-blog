@@ -17,7 +17,7 @@
 		<style>:host{display:block;--app-primary-color:#4285f4;--app-secondary-color:black;}app-header{background-color:var(--app-primary-color);color:#fff;}app-header paper-icon-button{--paper-icon-button-ink-color:white;}.drawer-list{margin:0 20px;}.drawer-list a{display:block;padding:0 16px;line-height:40px;text-decoration:none;color:var(--app-secondary-color);}.drawer-list a.iron-selected{color:black;font-weight:bold;}.drawer-list a.subroute{padding-left:32px;}</style>
 
 		<app-location route="{{route}}"></app-location>
-		<app-route route="{{route}}" pattern="{{pattern}}" data="{{routeData}}" tail="{{subroute}}"></app-route>
+		<app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
 
 		<app-drawer-layout fullbleed="">
 
@@ -51,6 +51,6 @@
 
 	</template>
 
-	<script>Polymer({is:"poly-blog-application",properties:{page:{type:String,reflectToAttribute:!0,observer:"_pageChanged"},pattern:{value:function(){if(window.location.pathname.indexOf("/poly-blog")===-1)return console.log("-1,",window.location.pathname),window.location.pathname;var e=window.location.pathname.substring(0,window.location.pathname.lastIndexOf("/"));return console.log("Matched",e),e}}},observers:["_routePageChanged(routeData.page)"],_routePageChanged:function(e){e&&"poly-blog"!==e?this.page=e:this.page="view1",console.log("_routePageChanged:",e,this.page),console.log("_routePageChanged:",this.route)},_pageChanged:function(e){console.log("_pageChanged:",e),this.importHref(this.resolveUrl("my-"+e+".html"),null,null,!0)}});</script>
+	<script>Polymer({is:"poly-blog-application",properties:{page:{type:String,reflectToAttribute:!0,observer:"_pageChanged"},pattern:{value:function(){if(window.location.pathname.indexOf("/poly-blog")===-1)return console.log("-1,",window.location.pathname),window.location.pathname;var e=window.location.pathname.substring(0,window.location.pathname.lastIndexOf("/"));return console.log("Matched",e),e}}},observers:["_routePageChanged(routeData.page)"],_routePageChanged:function(e){e&&"poly-blog"!==e?this.page=e:this.page="view1",console.log("_routePageChanged:",e,this.page,this.route)},_pageChanged:function(e){console.log("_pageChanged:",e),this.importHref(this.resolveUrl("my-"+e+".html"),null,null,!0)}});</script>
 </dom-module>
 </body></html>
