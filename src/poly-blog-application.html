@@ -52,7 +52,7 @@
 		<app-location route="{{route}}"></app-location>
 		<app-route
 			    route="{{route}}"
-			    pattern="/:page"
+			    pattern="poly-blog/:page"
 			    data="{{routeData}}"
 			    tail="{{subroute}}"
 			></app-route>
@@ -123,16 +123,8 @@
 			],
 
 			_routePageChanged: function(page) {
-				var poly = "poly-blog";
-
 				if (!page) {
 					this.page = "view1";
-				} else if (page === "poly-blog") {
-					this.page = "view1";
-
-					if (this.subroute && this.subroute.prefix && this.subroute.prefix.indexOf("/poly-blog") !== -1) {
-						this.page = this.subroute.path.replace("/", "");
-					}
 				} else {
 					this.page = page;
 				}
