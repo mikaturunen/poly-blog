@@ -52,7 +52,7 @@
 		<app-location route="{{route}}"></app-location>
 		<app-route
 			    route="{{route}}"
-			    pattern="/:page"
+			    pattern="{{pattern}}"
 			    data="{{routeData}}"
 			    tail="{{subroute}}"
 			></app-route>
@@ -103,6 +103,19 @@
 					reflectToAttribute: true,
 					observer: '_pageChanged'
 				},
+
+				pattern: {
+					value: function() {
+						if (window.location.pathname.indexOf("/poly-blog") === -1) {
+							console.log("-1,", window.location.pathname);
+							return window.location.pathname;
+						} else {
+							var path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/"));
+							console.log("Matched", path);
+							return path;
+						}
+					}
+				}
 			},
 
 			observers: [
