@@ -123,10 +123,16 @@
 			],
 
 			_routePageChanged: function(page) {
-				if (!page || page === "poly-blog") {
+				var poly = "poly-blog";
+
+				if (!page) {
 					this.page = "view1";
-				} else if (this.subroute.prefix === "/poly-blog") {
-					this.page = this.subroute.path.replace("/", "");
+				} else if (page === "poly-blog") {
+					this.page = "view1";
+
+					if (this.subroute.prefix && this.subroute.prefix.indexOf("/poly-blog") !== -1) {
+						this.page = this.subroute.path.replace("/", "");
+					}
 				} else {
 					this.page = page;
 				}
