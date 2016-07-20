@@ -51,6 +51,6 @@
 
 	</template>
 
-	<script>Polymer({is:"poly-blog-application",properties:{page:{type:String,reflectToAttribute:!0,observer:"_pageChanged"}},observers:["_routePageChanged(routeData.page)"],_routePageChanged:function(e){e&&"poly-blog"!==e?this.page=e:this.page="view1",console.log("_routePageChanged:",e,this.page)},_pageChanged:function(e){console.log("_pageChanged:",e),this.importHref(this.resolveUrl("my-"+e+".html"),null,null,!0)}});</script>
+	<script>Polymer({is:"poly-blog-application",properties:{page:{type:String,reflectToAttribute:!0,observer:"_pageChanged"}},observers:["_routePageChanged(routeData.page)"],_routePageChanged:function(e){e&&"poly-blog"!==e?this.page=e:this.page="view1",console.log("_routePageChanged:",e,this.page),console.log("_routePageChanged:",this.route)},_pageChanged:function(e){console.log("_pageChanged:",e),this.importHref(this.resolveUrl("my-"+e+".html"),null,null,!0)}});</script>
 </dom-module>
 </body></html>
