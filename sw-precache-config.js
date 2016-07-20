@@ -4,5 +4,5 @@ module.exports = {
 		'/poly-blog/manifest.json',
 		'/poly-blog/bower_components/webcomponentsjs/webcomponents-lite.min.js'
 	],
-	navigateFallback: './index.html'
+	navigateFallback: '/poly-blog/index.html'
 };

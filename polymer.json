@@ -3,7 +3,7 @@
 	"shell": "src/poly-blog-application.html",
 	"fragments": [
 		"/poly-blog/src/my-view1.html",
-		"/poly-blogsrc/my-view2.html",
-		"/poly-blogsrc/my-view3.html"
+		"/poly-blog/src/my-view2.html",
+		"/poly-blog/src/my-view3.html"
 	]
 }
