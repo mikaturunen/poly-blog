@@ -111,7 +111,7 @@
 							return window.location.pathname;
 						} else {
 							var path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/"));
-							console.log("Matched", path);
+							console.log("Matched", path, window.location.pathname.replace(path, ""));
 							return path;
 						}
 					}
@@ -129,7 +129,7 @@
 					this.page = page;
 				}
 
-				console.log("_routePageChanged:", page, this.page, this.route);
+				console.log("_routePageChanged:", page, this.page, this.route, this.routeData, this.subroute);
 			},
 
 			_pageChanged: function(page) {
