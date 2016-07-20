@@ -1,6 +1,6 @@
 {
 	"entrypoint": "index.html",
-	"shell": "src/poly-blog-application.html",
+	"shell": "/poly-blog/src/poly-blog-application.html",
 	"fragments": [
 		"/poly-blog/src/my-view1.html",
 		"/poly-blog/src/my-view2.html",
