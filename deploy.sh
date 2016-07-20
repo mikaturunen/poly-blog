@@ -6,7 +6,7 @@ TARGET_BRANCH="gh-pages"
 
 function doCompile {
 	echo "Moving all specific files to ./out for gh-pages."
-	mv ./build/bundled/ out
+	mv ./build/bundled/* out
 	mv travis.enc out
 
 	echo "List files ./out -> gh-pages"
